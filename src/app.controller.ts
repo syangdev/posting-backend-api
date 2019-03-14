@@ -17,4 +17,11 @@ export class AppController {
     this.logger.log(testString);
     return testString;
   }
+
+  @Get("/api")
+  api(): string {
+    const testString = `[${Date.now()}] api`;
+    this.logger.log(testString);
+    return testString;
+  }
 }
