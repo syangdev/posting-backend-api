@@ -7,12 +7,13 @@ export class AppController {
 
   @Get()
   getHello(): string {
+    this.logger.log(`[${Date.now()}] getHello`);
     return this.appService.getHello();
   }
 
   @Get("/test")
   test(): string {
-    const testString = 'testing ... '+ Date.now();
+    const testString = `[${Date.now()}] test`;
     this.logger.log(testString);
     return testString;
   }
