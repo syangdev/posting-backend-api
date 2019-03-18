@@ -1,0 +1,1 @@
+export const RouteRoot: string = 'api';
